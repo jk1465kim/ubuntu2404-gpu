@@ -29,8 +29,11 @@ variable "build-name" {
 variable "build-sources" { 
   type = list(string) 
 }
-variable "build-provisioner-file-sources" { 
-  type = list(string) 
+#variable "build-provisioner-file-sources" { 
+#  type = list(string) 
+#}
+variable "build-provisioner-file-sources-path" {
+  type = string
 }
 variable "build-provisioner-file-destination" {
   type = string 

@@ -22,7 +22,10 @@ build {
   name = "${var.build-name}"
   sources = "${var.build-sources}"
   provisioner "file" {
-    sources = "${var.build-provisioner-file-sources}"
+    sources = [
+    "${var.build-provisioner-file-sources-path}/${var.nvidia_driver_local_repo_file_name}",
+    "${var.build-provisioner-file-sources-path}/${var.nvidia_source_apt_pin_file_name}"
+    ]
     destination = "${var.build-provisioner-file-destination}"
   }
   provisioner "shell" {
