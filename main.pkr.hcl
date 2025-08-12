@@ -25,6 +25,7 @@ build {
     sources = [
     "${var.build-provisioner-file-sources-path}/${var.nvidia_driver_local_repo_file_name}",
     "${var.build-provisioner-file-sources-path}/${var.nvidia_source_apt_pin_file_name}"
+    "${var.build-provisioner-file-sources-path}/${var.scp-gpu-activate_shell_name}"
     ]
     destination = "${var.build-provisioner-file-destination}"
   }
@@ -32,6 +33,7 @@ build {
   inline = [
   "sudo /usr/bin/cloud-init status --wait",
   local.install_nvidia_driver,
+  local.set_scp-gpu-activate_shell,
   local.remove_apt_packages,
   "sudo /usr/bin/cloud-init clean",
   local.clear_logs

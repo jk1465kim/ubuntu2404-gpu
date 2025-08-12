@@ -22,7 +22,7 @@ elif [[ ${NUM_NVIDIA_H100_DEVICE} > 0 ]];then
     echo "options nvidia NVreg_NvLinkDisable=1" > "${NVLINK_DISABLE_CONF}"
     update-initramfs -u
 elif [[ ${NUM_NVIDIA_A100_DEVICE} > 0 ]];then
-echo    nvidia-smi -mig 0
+    nvidia-smi -mig 0
 else
     echo "There is no action"
 fi

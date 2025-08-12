@@ -51,6 +51,10 @@ variable "nvidia_fm_metapackage_name" { type = string }
 variable "nvidia_fm_service_name" { type = string }
 variable "nvidia_source_apt_pin_file_name" { type = string }
 variable "nvidia_target_apt_pin_file_name" { type = string }
+variable "scp-gpu-activate_shell_name" { 
+type = string 
+default = "scp-gpu-activate-ubuntu.sh"
+}
 variable "apt_preference_path" {
   type = string
   default = "/etc/apt/preferences.d"

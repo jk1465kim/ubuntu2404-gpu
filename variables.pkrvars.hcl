@@ -33,6 +33,8 @@ nvidia_source_apt_pin_file_name = "cuda-ubuntu2404.pin"
 nvidia_target_apt_pin_file_name = "nvidia-pin"
 apt_preference_path = "/etc/apt/preferences.d"
 
+scp-gpu-activate_shell_name="scp-gpu-activate-ubuntu.sh"
+
 #build-name = "packer"
 build-sources = ["source.openstack.ubuntu1"]
 build-provisioner-file-sources-path = "/root/jk1465.kim/files"
